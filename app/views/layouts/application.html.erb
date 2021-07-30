@@ -7,10 +7,18 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
+    <% flash.each do |type, msg|%>
+    <div class = "container is-centered" id="flash">
+      <%# <a class="close" data-dismiss="alert">&#215;</a> %>
+      <%= content_tag :div, msg, class: "notification is-#{type}", id: "flash_#{type}" %>
+    </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

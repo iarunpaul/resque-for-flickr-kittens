@@ -1,0 +1,43 @@
+          <%= simple_form_for(@kitten) do |f| %>
+            <div class="field">
+              <div class="control">
+                <%= f.input :name,
+                            required: false,
+                            autofocus: true,
+                            wrapper: false,
+                            input_html: { autocomplete: "name", class: 'input' } %>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+
+                <%= f.input :age,
+                            required: false,
+                            wrapper: false,
+                            input_html: { autocomplete: "age", class: 'input' } %>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+
+                <%= f.input :softness,
+                            required: false,
+                            wrapper: false,
+                            input_html: { autocomplete: "softness", class: 'input' } %>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+
+                <%= f.input :cuteness,
+                            required: false,
+                            wrapper: false,
+                            input_html: { autocomplete: "cuteness", class: 'input' } %>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <%= f.button :submit, class: 'button is-primary' %>
+              </div>
+            </div>
+          <% end %>

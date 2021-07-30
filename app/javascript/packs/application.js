@@ -8,6 +8,16 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+// import "jquery"// no explicit import required
+import "bulma"
+import "../stylesheets/style.scss"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// $(document).on('turbolinks:load', function(){
+//   alert("Javascript Works");
+// }) //Test to checck if jquery works; comment out after test
+setTimeout(function () {
+  $('#flash').remove();
+}, 5000);

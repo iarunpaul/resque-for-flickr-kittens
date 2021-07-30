@@ -1,0 +1,15 @@
+// @import "bulma"; // it seems bulma import is only required on packs/application.js
+body {
+  background-color: rgb(48, 185, 185);
+}
+
+#flash {
+     position: absolute;
+     width: 100%;
+
+}
+
+#flash-notice, #flash-success, #flash-danger, #flash-alert {
+    text-align: center;
+    // margin-top: -15px;
+}
