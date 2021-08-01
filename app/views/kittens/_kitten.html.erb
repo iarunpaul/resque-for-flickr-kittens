@@ -9,7 +9,7 @@
       <div class="media">
         <div class="media-left">
           <figure class="image is-48x48">
-            <img src= <%= kitten.flickr_url  %> alt="https://bulma.io/images/placeholders/96x96.png">
+            <img src= <%= kitten.flickr_url ? kitten.flickr_url : "https://bulma.io/images/placeholders/96x96.png"  %> alt="">
           </figure>
         </div>
         <div class="media-content">

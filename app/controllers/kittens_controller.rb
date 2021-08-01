@@ -24,6 +24,7 @@ class KittensController < ApplicationController
   def create
     @kitten = Kitten.new(kitten_params)
     if @kitten.save
+      Resque.enqueue(FlickrUrlGenerator, @kitten.id)
       flash[:success] = "Object successfully created"
       redirect_to @kitten
     else

@@ -1,5 +1,6 @@
 class Kitten < ApplicationRecord
-  before_create :add_flickr_url
+  enum softness: [:soft, :softer, :softest]
+  # before_create :add_flickr_url
 
   def add_flickr_url
     flickr = Flickr.new "a07d1ab83eabfd7d03153e003f306699", "9471961d09cdea4f"

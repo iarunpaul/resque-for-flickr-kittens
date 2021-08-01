@@ -20,7 +20,7 @@
             <div class="field">
               <div class="control">
 
-                <%= f.input :softness,
+                <%= f.input :softness, collection: [:soft, :softer, :softest, :error],
                             required: false,
                             wrapper: false,
                             input_html: { autocomplete: "softness", class: 'input' } %>
