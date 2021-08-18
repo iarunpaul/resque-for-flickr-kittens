@@ -1,5 +1,5 @@
 class Kitten < ApplicationRecord
-  enum softness: [:soft, :softer, :softest]
+  # enum softness: [:soft, :softer, :softest]
   # before_create :add_flickr_url
 
   def add_flickr_url
