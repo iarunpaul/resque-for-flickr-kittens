@@ -1,4 +1,5 @@
-// @import "bulma"; // it seems bulma import is only required on packs/application.js
+@import "bulma"; // it seems bulma import is only required on packs/application.js
+                    // but it is really required in production
 body {
   background-color: rgb(48, 185, 185);
 }

@@ -10,7 +10,9 @@ import "channels"
 
 // import "jquery"// no explicit import required
 import "bulma"
+import "@fortawesome/fontawesome-free/css/all"
 import "../stylesheets/style.scss"
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
